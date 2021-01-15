@@ -30,7 +30,7 @@ class DispatchJobs extends Command
      */
     public function handle()
     {
-        for($i = 0; $i<10000; $i++){
+        for($i = 0; $i<300; $i++){
             CreateUserJob::dispatch();
         }
         $this->info("jobs dispatched.");

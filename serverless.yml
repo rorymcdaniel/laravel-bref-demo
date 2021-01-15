@@ -69,6 +69,17 @@ functions:
             - ${bref:layer.php-80} # PHP
             - ${bref:layer.console} # The "console" layer
 
+    scheduler:
+      handler: artisan
+      timeout: 120 # in seconds
+      layers:
+        - ${bref:layer.php-80} # PHP
+        - ${bref:layer.console} # The "console" layer
+      events:
+        - schedule:
+            rate: rate(1 minute)
+            input: '"schedule:run"'
+
     worker:
       handler: worker.php
       layers:
