@@ -8,6 +8,8 @@ provider:
     # The stage of the application, e.g. dev, production, staging… ('dev' is the default)
     stage: dev
     runtime: provided.al2
+    httpApi:
+      payload: '1.0' # allows multiple cookies to be set by the application
     lambdaHashingVersion: 20201221
     environment:
       APP_KEY: ${ssm:APP_KEY}
