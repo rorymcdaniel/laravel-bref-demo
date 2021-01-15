@@ -28,7 +28,7 @@ provider:
       MAIL_FROM_NAME: "Jetstream Test App"
       LOG_CHANNEL: stderr
       SESSION_DRIVER: cookie
-      ASSET_URL:
+      ASSET_URL: ${ssm:ASSET_URL}
       MIX_ASSET_URL: ${ssm:ASSET_URL}
 
 
