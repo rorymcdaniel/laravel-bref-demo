@@ -31,6 +31,7 @@ provider:
       SESSION_DRIVER: cookie
       ASSET_URL: ${ssm:ASSET_URL}
       MIX_ASSET_URL: ${ssm:ASSET_URL}
+      JWT_SECRET: ${ssm:JWT_SECRET}
       SQS_QUEUE:
         Ref: AlertQueue
     iamRoleStatements:
